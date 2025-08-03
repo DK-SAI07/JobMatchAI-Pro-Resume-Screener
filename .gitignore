@@ -1,0 +1,10 @@
+.env
+__pycache__/
+pycache/
+*.pyc
+.DS_Store
+enc
+*.enc
+*.java
+tempCodeRunnerFile.java
+

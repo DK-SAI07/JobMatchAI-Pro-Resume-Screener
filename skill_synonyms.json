@@ -1,0 +1,94 @@
+{
+    "machine learning": [
+        "ml",
+        "artificial intelligence",
+        "ai",
+        "deep learning",
+        "predictive modeling"
+    ],
+    "python": [
+        "py"
+    ],
+    "java": [
+        "jdk",
+        "jre",
+        "core java"
+    ],
+    "javascript": [
+        "js",
+        "ecmascript"
+    ],
+    "sql": [
+        "structured query language",
+        "postgresql",
+        "mysql"
+    ],
+    "aws": [
+        "amazon web services",
+        "amazon cloud",
+        "ec2",
+        "s3",
+        "lambda"
+    ],
+    "gcp": [
+        "google cloud",
+        "google cloud platform",
+        "bigquery"
+    ],
+    "azure": [
+        "microsoft azure",
+        "azure cloud"
+    ],
+    "docker": [
+        "containerization",
+        "docker containers"
+    ],
+    "kubernetes": [
+        "k8s",
+        "container orchestration",
+        "pod management"
+    ],
+    "react": [
+        "reactjs",
+        "react.js"
+    ],
+    "node.js": [
+        "node",
+        "express",
+        "node js"
+    ],
+    "data analysis": [
+        "data analytics",
+        "eda",
+        "exploratory data analysis"
+    ],
+    "project management": [
+        "pmp",
+        "agile",
+        "scrum",
+        "kanban"
+    ],
+    "communication": [
+        "written communication",
+        "verbal communication",
+        "soft skills"
+    ],
+    "excel": [
+        "microsoft excel",
+        "spreadsheets"
+    ],
+    "powerpoint": [
+        "ms powerpoint",
+        "presentation tools"
+    ],
+    "sales": [
+        "business development",
+        "b2b sales",
+        "b2c sales"
+    ],
+    "customer service": [
+        "client support",
+        "customer success",
+        "crm"
+    ]
+}

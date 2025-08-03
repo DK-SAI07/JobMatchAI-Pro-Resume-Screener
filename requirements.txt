@@ -1,0 +1,14 @@
+streamlit
+python-dotenv
+docx2txt
+pdfplumber
+google-generativeai
+streamlit-lottie
+spacy
+sentence-transformers
+scikit-learn
+sklearn
+rapidfuzz
+numpy
+requests
+python -m spacy download en_core_web_lg

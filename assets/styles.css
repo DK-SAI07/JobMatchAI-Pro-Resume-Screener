@@ -1,0 +1,98 @@
+/* Targeting the button with the key "start_button" */
+.st-key-start_button button {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+  cursor:pointer;
+  background: #419f45; /* White background */
+  color: #f8f7f7; /* Green text */
+  overflow: hidden;
+  padding: 0.8em 1.2em;
+}
+
+/* The text inside the button needs a relative position to appear above the ::before element */
+.st-key-start_button button p {
+  position: relative;
+  z-index: 1;
+  color: #f8f7f7; /* Green text */
+  transition: color 0.4s; /* Add transition for text color */
+  font-weight: bold;
+}
+
+/* Change text color on hover */
+.st-key-start_button button:hover p {
+  color: #419f45; /* White text on hover */
+  font-weight: bold;
+}
+
+/* The sliding background element */
+.st-key-start_button button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15%; /* Adjusted for better coverage */
+  width: 130%; /* Made wider to cover the skew */
+  height: 100%;
+  background: #f8f7f7; /* Green sliding background */
+  transform: skew(30deg) translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: 0;
+}
+
+/* On hover, slide the background element to fully cover the button */
+.st-key-start_button button:hover::before {
+  transform: skew(30deg) translateX(0);
+}
+
+/* A subtle press-down effect when the button is clicked */
+.st-key-start_button button:active {
+  transform: scale(0.95);
+}
+
+/* Remove red outline on hover/focus */
+.st-key-start_button button:hover,
+.st-key-start_button button:focus,
+.st-key-start_button button:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.st-key-analyze_button button {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 1em;
+  cursor:pointer;
+  border: none;
+  background: #4CAF50; /* Green background */
+  color: #f8f7f7; /* White text */
+  overflow: hidden;
+  padding: 0.8em 1.2em;
+}
+
+.st-key-analyze_button button p {
+  position: relative;
+  z-index: 1;
+  color: #f8f7f7; /* White text */
+  transition: color 0.4s; /* Add transition for text color */
+  font-size: 17px;
+}
+
+.st-key-analyze_button button:active {
+  color: #000000; /* Green text on hover */
+}
+
+/* To remove Streamlit default UI-button hover Red Outline */
+button:focus,
+button:hover,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
