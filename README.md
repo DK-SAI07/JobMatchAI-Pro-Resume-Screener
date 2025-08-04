@@ -168,7 +168,7 @@ This project is licensed under the MIT License. See
 3. **App not launching?** Double-check `requirements.txt` and Streamlit logs.
 4. **Feature requests/bugs?** Open an issue above!
 
-**Built with ❤️ for the future of recruiting.**
+**Built with ❤️ to empower every job seeker, recruiter, and dreamer for the future of work.**
 
 > *“The best way to predict your future is to create it.”*
 
