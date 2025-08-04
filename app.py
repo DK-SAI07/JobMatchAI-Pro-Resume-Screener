@@ -38,9 +38,9 @@ gemini_api_key = os.getenv("GEMINI_API_KEY")
 def load_nlp_models():
     """Loads the spaCy and the domain-specific Sentence Transformer models."""
     try:
-        nlp = spacy.load("en_core_web_lg")
+        nlp = spacy.load("en_core_web_md")
     except OSError:
-        st.error("spaCy model 'en_core_web_lg' not found. Please run 'python -m spacy download en_core_web_lg'")
+        st.error("spaCy model 'en_core_web_md' not found. Please run 'python -m spacy download en_core_web_md'")
         st.stop()
     # Using the specified domain-specific model
     sentence_model = SentenceTransformer("AventIQ-AI/bert-talentmatchai")
