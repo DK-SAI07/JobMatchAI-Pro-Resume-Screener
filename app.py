@@ -4,6 +4,7 @@ import docx2txt
 import pdfplumber
 import re
 import google.generativeai as genai
+import google.api_core.exceptions
 import json
 import requests
 from streamlit_lottie import st_lottie
@@ -28,10 +29,9 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 env_path = os.path.join(script_dir, '.env')
 load_dotenv(env_path)
 
-# Also try loading from current directory as fallback 
+# Also try loading from current directory as fallback
 load_dotenv()
-gemini_api_key = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
-# gemini_api_key = os.getenv("GEMINI_API_KEY")
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 
 
 # Pre-load NLP Models
@@ -115,6 +115,16 @@ def minimal_clean(text):
     """Performs light cleaning on text for Gemini (Version B)."""
     return re.sub(r'\s+', ' ', text).strip()
 
+def safe_generate(model, prompt):
+    try:
+        return model.generate_content(prompt)
+    except google.api_core.exceptions.ResourceExhausted:
+        st.error("🚫 Gemini API quota exhausted. Please try again later.")
+        st.stop()
+    except Exception as e:
+        st.error(f"⚠️ Unexpected error: {e}")
+        st.stop()
+
 def extract_ner_entities(text):
     """Extracts structured entities using spaCy NER."""
     doc = nlp(text)
@@ -192,8 +202,8 @@ def analyze_with_gemini(api_key, model_name, resume_text, jd_text):
         ---
         Provide only the JSON object as your response.
         """
-
-        response = model.generate_content(prompt)
+        response = safe_generate(model, prompt)
+        # response = model.generate_content(prompt)
         json_response_text = response.text.strip().replace("```json", "").replace("```", "")
         return json.loads(json_response_text)
     except Exception as e:
