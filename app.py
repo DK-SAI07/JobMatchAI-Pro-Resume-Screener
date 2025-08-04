@@ -33,7 +33,6 @@ load_dotenv(env_path)
 load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 
-
 # Pre-load NLP Models
 @st.cache_resource
 def load_nlp_models():
