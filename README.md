@@ -67,7 +67,7 @@ JobMatchAI/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://yourusername/JobMatchAI-Pro.git
+   git clone https://yourusername/JobMatchAI-Pro-Resume-Screener.git
    cd JobMatchAI-Pro
    ```
 
