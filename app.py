@@ -219,7 +219,7 @@ if 'page' not in st.session_state: st.session_state.page = 'splash'
 if 'results' not in st.session_state: st.session_state.results = []
 if 'gemini_api_key' not in st.session_state: st.session_state.gemini_api_key = gemini_api_key or ''
 if 'final_jd_raw' not in st.session_state: st.session_state.final_jd_raw = ''
-if 'selected_model' not in st.session_state: st.session_state.selected_model = 'gemini-1.5-flash'
+if 'selected_model' not in st.session_state: st.session_state.selected_model = 'gemini-2.5-flash'
 if 'on_demand_results' not in st.session_state: st.session_state.on_demand_results = {}
 
 # App Pages
@@ -264,7 +264,7 @@ def show_main_app():
              "</p>",
              unsafe_allow_html=True
              )
-        st.session_state.selected_model = st.selectbox("Select Analysis Model", ('gemini-1.5-flash', 'gemini-1.5-pro'), index=0 if st.session_state.selected_model == 'gemini-1.5-flash' else 1)
+        st.session_state.selected_model = st.selectbox("Select Analysis Model", ('gemini-2.5-flash', 'gemini-2.5-pro'), index=0 if st.session_state.selected_model == 'gemini-2.5-flash' else 1)
         st.markdown("[Get your free API key from Google AI Studio](https://aistudio.google.com/app/apikey)")
 
     col1, col2 = st.columns((1, 2))
