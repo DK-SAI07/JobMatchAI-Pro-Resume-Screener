@@ -26,7 +26,7 @@ JobMatchAI Pro screens resumes against job descriptions locally with a cutting-e
 ## 🛠️ Tech Stack
 
 -   Python 3.10+
--   Google Generative AI (Gemini 1.5 Pro / Flash via API key)
+-   Google Generative AI (Gemini 2.5 Pro / Flash via API key)
 -   spaCy + SkillNer
 -   Sentence-Transformers (semantic embeddings)
 -   PDFPlumber, DOCX2TXT
